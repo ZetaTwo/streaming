@@ -6,25 +6,36 @@
 		body {
 			font-family: sans-serif;
 		}
-
 		.monospace {
 			font-family: monospace;
+		}
+		.toc {
+			width: 90%;
+			padding: 0;
+			border: 1px solid #000000;
+			border-width: 1px 1px 0px;
+		}
+		.toc-entry {
+			width: 100%;
+			margin: 0;
+
+			border-bottom: 1px solid #000000;
+		}
+		.toc-entry div {
+			padding: 10px;
+		}
+		.toc .active {
+			background-color: #fff8f8;
 		}
 	</style>
 </head>
 <body>
-	<p>
-		Hello, I'm one of the graphics in your bundle!
-		I'm where you put the graphics you want to run in your broadcast software!
-	</p>
-
-	<p>To edit me, open "<span id="path" class="monospace"></span>" in your favorite text editor or IDE.</p>
-
-	<p>You can use any libraries, frameworks, and tools you want. There are no limits.</p>
-
-	<p>Visit <a href="https://nodecg.com" target="_blank" rel="noopener">https://nodecg.com</a> for full documentation.</p>
-
-	<p>Have fun!</p>
+	<div class="toc">
+	  <div class="toc-entry active"><div>Intro</div></div>
+	  <div class="toc-entry"><div>Environment</div></div>
+	  <div class="toc-entry"><div>Warmup</div></div>
+	  <div class="toc-entry"><div>Web</div></div>
+	</div>
 
 	<script>
 		document.getElementById('path').textContent = `nodecg${window.location.pathname}`;
