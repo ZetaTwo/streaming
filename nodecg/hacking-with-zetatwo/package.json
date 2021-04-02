@@ -34,6 +34,11 @@
         "file": "index.html",
         "width": 1280,
         "height": 720
+      },
+      {
+        "file": "bottom-bar.html",
+        "width": 1920,
+        "height": 50
       }
     ]
   },

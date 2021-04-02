@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<style>
+		body {
+			font-family: sans-serif;
+			/*background-image: url('img/grain-bg.png');*/
+			background-color: #aaa;
+		}
+		.monospace {
+			font-family: monospace;
+		}
+		.bar {
+			height: 50px;
+			width: 100%;
+			display: flex;
+			background-color: #aaa;
+		}
+		.bar div {
+			height: 100%;
+			vertical-align: middle;
+			line-height: 50px;
+			margin-right: 50px;
+			font-size: 30px;
+		}
+		.logo {
+		}
+	</style>
+</head>
+<body>
+	<div class="bar">
+		<div class="logo">
+			<img src="img/Logo-wide.png">
+		</div>
+		<div id="status"></div>
+	</div>
+
+	<script>
+		const statusRep = nodecg.Replicant('status', { defaultValue: "" });
+		const statusDiv = document.getElementById('status');
+		statusRep.on('change', (newValue, oldValue) => {
+			statusDiv.innerText = newValue;
+		});
+	</script>
+</body>
+</html>
